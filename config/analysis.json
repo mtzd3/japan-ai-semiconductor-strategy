@@ -1,0 +1,85 @@
+{
+  "analysis_framework": {
+    "market_analysis": {
+      "data_sources": [
+        "IDC Japan",
+        "Gartner",
+        "McKinsey Global Institute",
+        "経済産業省統計",
+        "SEMI Japan",
+        "日本半導体製造装置協会"
+      ],
+      "metrics": {
+        "market_size": {
+          "unit": "億円",
+          "timeframe": "2020-2030",
+          "segments": ["AI専用チップ", "GPU", "FPGA", "ASIC", "メモリ"]
+        },
+        "growth_rate": {
+          "unit": "年率%",
+          "calculation_method": "CAGR"
+        },
+        "market_share": {
+          "unit": "%",
+          "geographic_scope": ["日本", "アジア太平洋", "グローバル"]
+        }
+      }
+    },
+    "competitive_analysis": {
+      "key_players": {
+        "global": ["NVIDIA", "AMD", "Intel", "Qualcomm", "Broadcom"],
+        "asian": ["TSMC", "Samsung", "SK Hynix", "MediaTek"],
+        "japanese": ["ソニー", "東芝", "ルネサス", "キオクシア", "富士通"]
+      },
+      "evaluation_criteria": [
+        "市場シェア",
+        "技術力",
+        "R&D投資額",
+        "特許ポートフォリオ",
+        "製造能力",
+        "パートナーシップ"
+      ]
+    },
+    "technology_assessment": {
+      "focus_areas": [
+        "AI推論チップ",
+        "エッジAIプロセッサ",
+        "ニューロモルフィックチップ",
+        "量子コンピューティング",
+        "光コンピューティング"
+      ],
+      "maturity_levels": {
+        "1": "基礎研究段階",
+        "2": "応用研究段階", 
+        "3": "開発段階",
+        "4": "実証段階",
+        "5": "商用化段階"
+      }
+    }
+  },
+  "scoring_methodology": {
+    "challenge_assessment": {
+      "severity_scale": {
+        "1-3": "軽微",
+        "4-6": "中程度",
+        "7-8": "深刻",
+        "9-10": "極めて深刻"
+      },
+      "urgency_scale": {
+        "1-3": "長期対応可",
+        "4-6": "中期対応必要",
+        "7-8": "短期対応必要",
+        "9-10": "緊急対応必要"
+      }
+    },
+    "opportunity_evaluation": {
+      "impact_potential": {
+        "scale": "1-10",
+        "factors": ["市場規模", "成長性", "競争優位性", "実現可能性"]
+      },
+      "investment_requirement": {
+        "categories": ["低（100億円未満）", "中（100-1000億円）", "高（1000億円以上）"]
+      }
+    }
+  }
+}

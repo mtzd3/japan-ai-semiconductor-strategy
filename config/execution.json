@@ -1,0 +1,135 @@
+{
+  "execution_settings": {
+    "data_collection": {
+      "sources": {
+        "primary": [
+          "経済産業省統計",
+          "JEITA統計",
+          "SEMI Japan",
+          "日本半導体製造装置協会"
+        ],
+        "secondary": [
+          "IDC Japan",
+          "Gartner Japan",
+          "McKinsey Global Institute",
+          "PwC Japan"
+        ],
+        "international": [
+          "WSTS",
+          "SIA",
+          "SEMI Global",
+          "IEEE Spectrum"
+        ]
+      },
+      "update_frequency": {
+        "market_data": "quarterly",
+        "competitor_data": "semi-annually", 
+        "technology_trends": "monthly",
+        "policy_updates": "as_needed"
+      },
+      "quality_thresholds": {
+        "minimum_confidence": 7,
+        "data_freshness_months": 6,
+        "source_diversity": 3
+      }
+    },
+    "analysis_pipeline": {
+      "stages": [
+        {
+          "name": "data_validation",
+          "timeout_minutes": 30,
+          "retry_attempts": 3,
+          "quality_gate": 80
+        },
+        {
+          "name": "market_analysis",
+          "timeout_minutes": 60,
+          "dependencies": ["data_validation"],
+          "output_format": "structured_json"
+        },
+        {
+          "name": "challenge_assessment",
+          "timeout_minutes": 45,
+          "dependencies": ["market_analysis"],
+          "prioritization_method": "impact_urgency_matrix"
+        },
+        {
+          "name": "recommendation_generation",
+          "timeout_minutes": 90,
+          "dependencies": ["challenge_assessment"],
+          "optimization_criteria": ["feasibility", "impact", "cost"]
+        },
+        {
+          "name": "report_generation",
+          "timeout_minutes": 120,
+          "dependencies": ["recommendation_generation"],
+          "output_formats": ["markdown", "html", "pdf"]
+        }
+      ]
+    },
+    "performance_monitoring": {
+      "metrics": [
+        "execution_time",
+        "data_quality_score",
+        "analysis_completeness",
+        "recommendation_coverage"
+      ],
+      "alerts": {
+        "execution_timeout": true,
+        "quality_degradation": true,
+        "missing_data": true
+      },
+      "logging": {
+        "level": "info",
+        "retention_days": 90,
+        "include_performance_metrics": true
+      }
+    }
+  },
+  "deployment": {
+    "environments": {
+      "development": {
+        "data_sources": "mock",
+        "validation_strict": false,
+        "output_path": "./output/dev"
+      },
+      "staging": {
+        "data_sources": "limited_real",
+        "validation_strict": true,
+        "output_path": "./output/staging"
+      },
+      "production": {
+        "data_sources": "full_real",
+        "validation_strict": true,
+        "output_path": "./output/production",
+        "backup_enabled": true
+      }
+    },
+    "scaling": {
+      "max_concurrent_analyses": 3,
+      "memory_limit_gb": 8,
+      "cpu_cores": 4
+    }
+  },
+  "integration": {
+    "external_apis": {
+      "rate_limits": {
+        "requests_per_minute": 60,
+        "requests_per_hour": 1000
+      },
+      "authentication": {
+        "method": "api_key",
+        "rotation_days": 90
+      },
+      "fallback_strategy": "cached_data"
+    },
+    "notification": {
+      "channels": ["email", "slack"],
+      "events": [
+        "analysis_complete",
+        "quality_alert",
+        "system_error"
+      ]
+    }
+  }
+}

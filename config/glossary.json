@@ -1,0 +1,130 @@
+{
+  "technical_terms": {
+    "AI半導体": {
+      "english": "AI Semiconductor",
+      "definition": "人工知能の処理に特化して設計された半導体チップ",
+      "category": "hardware"
+    },
+    "GPU": {
+      "english": "Graphics Processing Unit",
+      "japanese": "グラフィックス処理装置",
+      "definition": "並列処理に優れ、AI計算にも広く使用される処理装置",
+      "category": "hardware"
+    },
+    "ASIC": {
+      "english": "Application-Specific Integrated Circuit",
+      "japanese": "特定用途向け集積回路",
+      "definition": "特定の用途に特化して設計されたカスタム集積回路",
+      "category": "hardware"
+    },
+    "FPGA": {
+      "english": "Field-Programmable Gate Array",
+      "japanese": "フィールドプログラマブルゲートアレイ",
+      "definition": "プログラム可能な論理回路を持つ集積回路",
+      "category": "hardware"
+    },
+    "ニューロモルフィック": {
+      "english": "Neuromorphic",
+      "definition": "脳の神経回路を模倣した計算アーキテクチャ",
+      "category": "technology"
+    },
+    "エッジAI": {
+      "english": "Edge AI",
+      "definition": "クラウドではなくデバイス側でAI処理を行う技術",
+      "category": "technology"
+    },
+    "ファウンドリ": {
+      "english": "Foundry",
+      "japanese": "受託製造",
+      "definition": "他社の設計による半導体の製造を専門に行う企業",
+      "category": "business"
+    },
+    "EDA": {
+      "english": "Electronic Design Automation",
+      "japanese": "電子設計自動化",
+      "definition": "集積回路の設計を自動化するソフトウェアツール",
+      "category": "software"
+    },
+    "IP": {
+      "english": "Intellectual Property",
+      "japanese": "知的財産",
+      "definition": "半導体設計における再利用可能な回路ブロック",
+      "category": "legal"
+    },
+    "SoC": {
+      "english": "System on Chip",
+      "japanese": "システムオンチップ",
+      "definition": "一つのチップ上にシステム全体を集積した集積回路",
+      "category": "hardware"
+    }
+  },
+  "business_terms": {
+    "サプライチェーン": {
+      "english": "Supply Chain",
+      "definition": "原材料から最終製品まての一連の供給網",
+      "category": "business"
+    },
+    "ファブレス": {
+      "english": "Fabless",
+      "definition": "製造設備を持たず設計に特化した半導体企業",
+      "category": "business"
+    },
+    "IDM": {
+      "english": "Integrated Device Manufacturer",
+      "japanese": "垂直統合型デバイスメーカー",
+      "definition": "設計から製造まで一貫して行う半導体企業",
+      "category": "business"
+    },
+    "CAGR": {
+      "english": "Compound Annual Growth Rate",
+      "japanese": "年平均成長率",
+      "definition": "複数年にわたる成長率の幾何平均",
+      "category": "finance"
+    }
+  },
+  "policy_terms": {
+    "経済安全保障": {
+      "english": "Economic Security",
+      "definition": "経済活動を通じた国家安全保障の確保",
+      "category": "policy"
+    },
+    "戦略的自律性": {
+      "english": "Strategic Autonomy",
+      "definition": "重要技術分野における自国の独立性確保",
+      "category": "policy"
+    },
+    "デュアルユース技術": {
+      "english": "Dual-Use Technology",
+      "definition": "民生用と軍事用の両方に使用可能な技術",
+      "category": "policy"
+    },
+    "輸出管理": {
+      "english": "Export Control",
+      "definition": "戦略物資の輸出を規制する制度",
+      "category": "regulation"
+    },
+    "産学官連携": {
+      "english": "Industry-Academia-Government Collaboration",
+      "definition": "産業界、学術界、政府の協力体制",
+      "category": "collaboration"
+    }
+  },
+  "regional_terms": {
+    "シリコンバレー": {
+      "english": "Silicon Valley",
+      "definition": "米国カリフォルニア州の技術産業集積地",
+      "category": "geography"
+    },
+    "竹科": {
+      "english": "Hsinchu Science Park",
+      "japanese": "新竹サイエンスパーク",
+      "definition": "台湾の半導体産業集積地",
+      "category": "geography"
+    },
+    "中関村": {
+      "english": "Zhongguancun",
+      "definition": "中国北京の技術産業集積地",
+      "category": "geography"
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "data_validation": {
+    "market_data": {
+      "required_fields": [
+        "marketSize",
+        "growthRate", 
+        "year",
+        "source",
+        "confidence"
+      ],
+      "validation_rules": {
+        "marketSize": {
+          "type": "number",
+          "min": 0,
+          "unit": "億円"
+        },
+        "growthRate": {
+          "type": "number",
+          "min": -50,
+          "max": 200,
+          "unit": "%"
+        },
+        "year": {
+          "type": "number",
+          "min": 2020,
+          "max": 2035
+        },
+        "confidence": {
+          "type": "number",
+          "min": 1,
+          "max": 10
+        }
+      }
+    },
+    "challenge_data": {
+      "required_fields": [
+        "id",
+        "title",
+        "category",
+        "severity",
+        "urgency",
+        "description"
+      ],
+      "validation_rules": {
+        "severity": {
+          "type": "number",
+          "min": 1,
+          "max": 10
+        },
+        "urgency": {
+          "type": "number", 
+          "min": 1,
+          "max": 10
+        },
+        "category": {
+          "type": "enum",
+          "values": ["technological", "economic", "geopolitical"]
+        }
+      }
+    },
+    "recommendation_data": {
+      "required_fields": [
+        "id",
+        "title",
+        "priority",
+        "description",
+        "implementationCost",
+        "timeframe"
+      ],
+      "validation_rules": {
+        "priority": {
+          "type": "enum",
+          "values": ["high", "medium", "low"]
+        },
+        "implementationCost": {
+          "type": "number",
+          "min": 0,
+          "unit": "億円"
+        }
+      }
+    }
+  },
+  "content_validation": {
+    "section_requirements": {
+      "executive_summary": {
+        "min_words": 300,
+        "max_words": 800,
+        "required_elements": [
+          "現状認識",
+          "主要課題",
+          "戦略的方向性"
+        ]
+      },
+      "market_analysis": {
+        "min_words": 2000,
+        "required_data_points": 10,
+        "required_charts": 3,
+        "required_tables": 2
+      },
+      "challenges": {
+        "min_challenges": 5,
+        "categories_coverage": ["technological", "economic", "geopolitical"],
+        "min_words_per_challenge": 200
+      },
+      "recommendations": {
+        "min_recommendations": 8,
+        "priority_distribution": {
+          "high": {"min": 2, "max": 4},
+          "medium": {"min": 3, "max": 5},
+          "low": {"min": 1, "max": 3}
+        }
+      }
+    },
+    "quality_metrics": {
+      "data_accuracy": {
+        "source_verification": true,
+        "cross_reference_check": true,
+        "date_consistency": true
+      },
+      "logical_consistency": {
+        "argument_flow": true,
+        "contradiction_check": true,
+        "evidence_support": true
+      },
+      "completeness": {
+        "section_coverage": 100,
+        "data_completeness": 90,
+        "reference_completeness": 85
+      }
+    }
+  },
+  "review_criteria": {
+    "technical_review": {
+      "accuracy": {
+        "weight": 30,
+        "criteria": [
+          "技術的事実の正確性",
+          "データの信頼性",
+          "分析手法の妥当性"
+        ]
+      },
+      "completeness": {
+        "weight": 25,
+        "criteria": [
+          "必要情報の網羅性",
+          "分析の深度",
+          "根拠の十分性"
+        ]
+      },
+      "relevance": {
+        "weight": 20,
+        "criteria": [
+          "政策目標との整合性",
+          "実現可能性",
+          "時宜性"
+        ]
+      },
+      "clarity": {
+        "weight": 25,
+        "criteria": [
+          "論理構成の明確性",
+          "表現の適切性",
+          "理解しやすさ"
+        ]
+      }
+    },
+    "policy_review": {
+      "feasibility": {
+        "weight": 35,
+        "criteria": [
+          "実装可能性",
+          "予算の現実性",
+          "制度的制約の考慮"
+        ]
+      },
+      "impact": {
+        "weight": 30,
+        "criteria": [
+          "期待効果の妥当性",
+          "波及効果の分析",
+          "リスク評価の適切性"
+        ]
+      },
+      "alignment": {
+        "weight": 35,
+        "criteria": [
+          "既存政策との整合性",
+          "国際動向との適合性",
+          "ステークホルダーの受容性"
+        ]
+      }
+    }
+  },
+  "approval_process": {
+    "stages": [
+      {
+        "name": "初期レビュー",
+        "reviewers": ["技術専門家"],
+        "criteria": ["technical_review"],
+        "threshold": 70
+      },
+      {
+        "name": "政策レビュー", 
+        "reviewers": ["政策専門家"],
+        "criteria": ["policy_review"],
+        "threshold": 75
+      },
+      {
+        "name": "最終レビュー",
+        "reviewers": ["技術専門家", "政策専門家", "編集者"],
+        "criteria": ["technical_review", "policy_review"],
+        "threshold": 80
+      }
+    ],
+    "final_approval": {
+      "required_approvals": 2,
+      "minimum_score": 80,
+      "mandatory_sections": [
+        "executive_summary",
+        "market_analysis", 
+        "challenges",
+        "recommendations"
+      ]
+    }
+  }
+}

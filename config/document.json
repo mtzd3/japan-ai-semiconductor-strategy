@@ -1,0 +1,59 @@
+{
+  "title": "日本AI半導体戦略提案書",
+  "version": "1.0.0",
+  "language": "ja",
+  "format": {
+    "output": ["markdown", "html", "pdf"],
+    "template": "government-proposal",
+    "styling": {
+      "theme": "professional",
+      "colors": {
+        "primary": "#1f4e79",
+        "secondary": "#c41e3a"
+      }
+    }
+  },
+  "sections": {
+    "executive_summary": {
+      "title": "エグゼクティブサマリー",
+      "order": 1,
+      "required": true
+    },
+    "market_analysis": {
+      "title": "市場分析",
+      "order": 2,
+      "required": true
+    },
+    "challenges": {
+      "title": "課題の特定と分析",
+      "order": 3,
+      "required": true
+    },
+    "recommendations": {
+      "title": "戦略的推奨事項",
+      "order": 4,
+      "required": true
+    },
+    "implementation": {
+      "title": "実装計画",
+      "order": 5,
+      "required": true
+    },
+    "international_benchmarking": {
+      "title": "国際ベンチマーキング",
+      "order": 6,
+      "required": true
+    },
+    "emerging_opportunities": {
+      "title": "新興機会",
+      "order": 7,
+      "required": true
+    }
+  },
+  "metadata": {
+    "author": "AI戦略策定チーム",
+    "created": "2025-01-12",
+    "classification": "政府提案書",
+    "target_audience": ["政策立案者", "産業界", "研究機関"]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "document_generation": {
+    "templates": {
+      "executive_summary": {
+        "max_length": 2000,
+        "key_elements": [
+          "現状認識",
+          "主要課題",
+          "戦略的方向性",
+          "重点施策",
+          "期待効果"
+        ],
+        "tone": "政策提案書"
+      },
+      "market_analysis": {
+        "sections": [
+          "グローバル市場動向",
+          "日本市場の現状",
+          "競合分析",
+          "技術トレンド",
+          "市場予測"
+        ],
+        "visualization": ["グラフ", "表", "チャート"],
+        "data_requirements": ["定量データ", "トレンド分析", "比較分析"]
+      },
+      "challenges": {
+        "categorization": ["技術的課題", "経済的課題", "地政学的課題"],
+        "analysis_depth": "詳細",
+        "prioritization": "影響度×緊急度マトリックス"
+      },
+      "recommendations": {
+        "structure": [
+          "戦略目標",
+          "具体的施策",
+          "実装計画",
+          "必要リソース",
+          "期待効果",
+          "リスク評価"
+        ],
+        "prioritization": "高・中・低",
+        "timeframe": ["短期（1-2年）", "中期（3-5年）", "長期（5-10年）"]
+      }
+    },
+    "formatting": {
+      "markdown": {
+        "heading_levels": 6,
+        "table_format": "github",
+        "code_blocks": true,
+        "math_support": true
+      },
+      "html": {
+        "css_framework": "bootstrap",
+        "responsive": true,
+        "print_friendly": true
+      },
+      "pdf": {
+        "page_size": "A4",
+        "margins": "2.5cm",
+        "font": "Noto Sans JP",
+        "include_toc": true,
+        "page_numbers": true
+      }
+    }
+  },
+  "content_validation": {
+    "quality_checks": [
+      "データの整合性",
+      "論理的一貫性",
+      "文章の明確性",
+      "専門用語の適切性",
+      "引用の正確性"
+    ],
+    "completeness_criteria": {
+      "minimum_sections": 7,
+      "minimum_word_count": 15000,
+      "required_data_points": 50,
+      "minimum_references": 30
+    },
+    "review_process": {
+      "stages": ["技術レビュー", "政策レビュー", "言語レビュー"],
+      "reviewers": ["技術専門家", "政策専門家", "編集者"],
+      "approval_threshold": "80%"
+    }
+  },
+  "localization": {
+    "primary_language": "ja",
+    "terminology": {
+      "consistency_check": true,
+      "glossary_reference": "config/glossary.json",
+      "technical_terms": "英語併記"
+    },
+    "cultural_adaptation": {
+      "government_style": true,
+      "formal_tone": true,
+      "respectful_language": true
+    }
+  }
+}
