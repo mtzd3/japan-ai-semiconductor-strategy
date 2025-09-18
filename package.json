@@ -8,7 +8,12 @@
     "start": "tsx src/main.ts",
     "build": "tsc",
     "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "test:integration": "vitest tests/integration",
     "generate-report": "tsx src/main.ts > output/report-$(date +%Y%m%d-%H%M%S).md",
+    "generate-full-report": "tsx src/generate-full-report.ts",
+    "run-complete-analysis": "tsx src/run-complete-analysis.ts",
     "dev": "tsx watch src/main.ts"
   },
   "keywords": [

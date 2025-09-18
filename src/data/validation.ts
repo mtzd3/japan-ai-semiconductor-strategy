@@ -95,8 +95,9 @@ export function validateTrendData(data: TrendData): boolean {
   }
 
   return true;
-}/
-**
+}
+
+/**
  * 課題データの検証
  */
 export function validateChallengeData(data: ChallengeData): boolean {

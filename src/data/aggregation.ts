@@ -314,8 +314,8 @@ export class MarketDataIntegrator {
     return this.trendAnalyzer;
   }
 }
-/
-**
+
+/**
  * 戦略提案統合システム
  */
 export class StrategicAnalysisIntegrator {
